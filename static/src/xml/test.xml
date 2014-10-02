@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+
+<data>
+    <record model="ir.ui.view" id="project_holidays_test">
+        <field name="name">project_holidays.test.form</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="model">project.task</field>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='reviewer_id']" position="after">
+                    <group>
+                        <newline />
+                        <div>TEST</div>
+                        <div string="TESSST"/>
+                        <field name="get_holidays" />
+                        <newline/>
+                    </group>
+                </xpath>
+            </data>
+        </field>
+    </record>
+</data>
+</openerp>
